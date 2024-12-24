@@ -1,3 +1,118 @@
-makanan yang menyenangkan adalah makanan nasi padang
-pada 2025 saya ingin menjadi taruna stin karena ini berkaiatan dengan keinginan saya
-makan
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Olyn</title>
+    <style>
+        body {
+            background-color: #87CEFA; /* Warna biru lembut */
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            color: #FFD700; /* Warna emas lembut */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px;
+            color: #FFFFFF; /* Warna putih */
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .flower {
+            width: 200px;
+            margin: 20px auto;
+            animation: bounce 2s infinite;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #FFFFFF;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .falling-flower {
+            position: absolute;
+            top: -50px;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Ulang Tahun bebek Olyn</h1>
+        <img src="olyn.jpg.jpeg" alt="Bunga Violet" class="flower">
+        <p>Selamat Ulang Tahun wahai Cantiku!</p>
+        <p>Semoga semua harapanmu terwujud dan hari-harimu dipenuhi kebahagiaan.</p>
+        <p>BELOM ULTAH SIH, tapi lucu aja, aduh bntr lagi 17 bjr.</p>
+        <footer>Semangat ya deks</footer>
+    </div>
+
+    <script>
+        // Animasi kelopak bunga jatuh
+        document.addEventListener("DOMContentLoaded", function() {
+            for (let i = 0; i < 30; i++) {
+                createFallingFlower();
+            }
+        });
+
+        function createFallingFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('falling-flower');
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.animationDuration = Math.random() * 3 + 2 + "s";
+            flower.innerHTML = '🌸'; 
+
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
